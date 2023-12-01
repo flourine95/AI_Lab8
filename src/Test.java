@@ -1,0 +1,56 @@
+public class Test {
+    public static void main(String[] args) {
+        MiniMaxSearchAlgo algo = new MiniMaxSearchAlgo();
+        Node nodeA = new Node("A");
+        Node nodeB = new Node("B");
+        Node nodeC = new Node("C");
+        Node nodeD = new Node("D", 0);
+        Node nodeE = new Node("E");
+        nodeA.addChild(nodeB);
+        nodeA.addChild(nodeC);
+        nodeA.addChild(nodeD);
+        nodeA.addChild(nodeE);
+        Node nodeF = new Node("F");
+        Node nodeG = new Node("G", -5);
+        nodeB.addChild(nodeF);
+        nodeB.addChild(nodeG);
+        Node nodeH = new Node("H", 3);
+        Node nodeI = new Node("I", 8);
+        Node nodeJ = new Node("J");
+        nodeC.addChild(nodeH);
+        nodeC.addChild(nodeI);
+        nodeC.addChild(nodeJ);
+        Node nodeK = new Node("K");
+        Node nodeL = new Node("L", 2);
+        Node nodeM = new Node("M");
+        nodeE.addChild(nodeK);
+        nodeE.addChild(nodeL);
+        nodeE.addChild(nodeM);
+        Node nodeN = new Node("N", 4);
+        Node nodeO = new Node("O");
+        nodeF.addChild(nodeN);
+        nodeF.addChild(nodeO);
+        Node nodeP = new Node("P", 9);
+        Node nodeQ = new Node("Q", -6);
+        Node nodeR = new Node("R", 0);
+        nodeJ.addChild(nodeP);
+        nodeJ.addChild(nodeQ);
+        nodeJ.addChild(nodeR);
+        Node nodeS = new Node("S", 3);
+        Node nodeT = new Node("T", 5);
+        nodeK.addChild(nodeS);
+        nodeK.addChild(nodeT);
+        Node nodeU = new Node("U", -7);
+        Node nodeV = new Node("V", -9);
+        nodeM.addChild(nodeU);
+        nodeM.addChild(nodeV);
+        Node nodeW = new Node("W", -3);
+        Node nodeX = new Node("X", -5);
+        nodeO.addChild(nodeW);
+        nodeO.addChild(nodeX);
+        ISearchAlgo iSearchAlgo = new MiniMaxSearchAlgo();
+        ISearchAlgo alphabeta = new AlphaBetaSearchAlgo();
+        alphabeta.execute(nodeA);
+        iSearchAlgo.execute(nodeA);
+    }
+}
